@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity"
+     >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/profile_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/profile_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/TextAppearance.AppCompat.Widget.PopupMenu.Header"
+            >
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:layout_below="@+id/profile_app_bar"
+         >
+
+         <TextView
+             style="@style/TextAppearance.AppCompat.Title"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="8dp"
+             android:layout_marginLeft="16dp"
+             android:textColor="@android:color/holo_blue_dark"
+             android:textStyle="bold"
+             android:textSize="24sp"
+             android:text="Stay Connected"
+             />
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Details About User. "
+             android:layout_marginTop="8dp"
+             android:layout_marginLeft="16dp"
+             android:textColor="@color/black"
+             android:textSize="18sp"
+             android:textStyle="bold"
+             />
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             android:padding="24dp"
+             >
+             <ImageView
+                 android:id="@+id/myImage"
+                 android:layout_width="200dp"
+                 android:layout_height="200dp"
+                 tools:srcCompat="@tools:sample/avatars" />
+
+             <TextView
+                 android:id="@+id/myName"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="24dp"
+                 android:text="Display Name"
+                 android:textColor="@color/com_facebook_blue"
+                 android:textSize="16sp"
+                 />
+
+             <TextView
+                 android:id="@+id/myEmail"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="24dp"
+                 android:textColor="@color/com_facebook_blue"
+                 android:text="Email"
+                 android:textSize="16sp"
+                 />
+
+             <Button
+                 android:id="@+id/logout"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="36dp"
+                 android:gravity="center_horizontal"
+                 android:onClick="logout"
+                 android:textStyle="bold"
+                 android:textColor="@android:color/white"
+                 android:text="Logout"
+                 />
+         </LinearLayout>
+
+     </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:src="@drawable/ic_wave"
+        android:scaleType="centerCrop"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>
